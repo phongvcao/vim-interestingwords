@@ -219,7 +219,7 @@ if !exists('g:interestingWordsDefaultMappings')
     let g:interestingWordsDefaultMappings = 1
 endif
 
-if !hasmapto('<Plug>InterestingWords')
+if g:interestingWordsDefaultMappings
     nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
     vnoremap <silent> <leader>k :call InterestingWords('v')<cr>
     nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
